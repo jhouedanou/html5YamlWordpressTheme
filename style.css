@@ -220,12 +220,16 @@ textarea:-moz-placeholder { color:#a9a9a9; }
         position:relative;
         margin:0 auto}
 .fixed{
-  position:fixed !important;
-}
+  position:fixed !important;}
 .absolute{
-  position: absolute !important;
-}
+  position: absolute !important;}
 .justify{text-align:justify;}
 .bold{font-weight:bold;}
 .center{text-align:center;}
 .right{text-align:right;}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
