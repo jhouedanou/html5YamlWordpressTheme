@@ -4,7 +4,17 @@
  * @subpackage HTML5-Reset-WordPress-Theme
  * @since HTML5 Reset 2.0
  */
+function wpc_dashicons() {
+wp_enqueue_style('dashicons');
+}
+function gn_tinymce_filtre($arr){
+    $arr['block_formats'] = 'Paragraph=p;Address=address;Pre=pre;Heading 3=h3;Heading 4=h4;Heading 5=h5';
+    return $arr;
+  }
+add_filter('tiny_mce_before_init', 'gn_tinymce_filtre');
+add_action('wp_enqueue_scripts', 'wpc_dashicons');
 
+add_filter('show_admin_bar', '__return_false');
 	// Options Framework (https://github.com/devinsays/options-framework-plugin)
 	if ( !function_exists( 'optionsframework_init' ) ) {
 		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
