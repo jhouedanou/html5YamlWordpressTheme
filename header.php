@@ -128,6 +128,12 @@
 		</header>
 
 		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
+			<?php
+					      wp_nav_menu(array(
+						  'menu' => 'Main Navigation', 
+						  'container_id' => 'cssmenu', 
+						  'walker' => new CSS_Menu_Maker_Walker()
+					      )); 
+					  ?>
 		</nav>
 
