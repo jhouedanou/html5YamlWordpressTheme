@@ -6,6 +6,7 @@ Author: Monkey Do! + @ckhicks
 Author URI: http://monkeydo.biz
 Version: 2.0
 */
+
 html,
 body,
 body div,
@@ -71,16 +72,12 @@ mark,
 audio,
 video,
 details,
-summary
-{
+summary {
     font-size: 100%;
     font-weight: normal;
-
     margin: 0;
     padding: 0;
-
     vertical-align: baseline;
-
     border: 0;
     background: transparent;
 }
@@ -93,307 +90,296 @@ header,
 nav,
 section,
 details,
-summary
-{
+summary {
     display: block;
 }
 
+
 /* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html
-{
+
+html {
     box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after
-{
+*:after {
     box-sizing: inherit;
 }
 
+
 /* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
 
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+
 img,
 object,
-embed
-{
+embed {
     max-width: 100%;
 }
 
+
 /* force a vertical scrollbar to prevent a jumpy page */
-html
-{
+
+html {
     overflow-y: scroll;
 }
 
+
 /* we use a lot of ULs that aren't bulleted.
   don't forget to restore the bullets within content. */
-ul
-{
+
+ul {
     list-style: none;
 }
 
 blockquote,
-q
-{
+q {
     quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
-q:after
-{
+q:after {
     content: '';
     content: none;
 }
 
-a
-{
+a {
     font-size: 100%;
-
     margin: 0;
     padding: 0;
-
     vertical-align: baseline;
-
     background: transparent;
 }
 
-del
-{
+del {
     text-decoration: line-through;
 }
 
 abbr[title],
-dfn[title]
-{
+dfn[title] {
     cursor: help;
-
     border-bottom: 1px dotted #000;
 }
 
+
 /* tables still need cellspacing="0" in the markup */
-table
-{
+
+table {
     border-spacing: 0;
     border-collapse: collapse;
 }
-th
-{
-    font-weight: bold;
 
+th {
+    font-weight: bold;
     vertical-align: bottom;
 }
-td
-{
-    font-weight: normal;
 
+td {
+    font-weight: normal;
     vertical-align: top;
 }
 
-hr
-{
+hr {
     display: block;
-
     height: 1px;
     margin: 1em 0;
     padding: 0;
-
     border: 0;
     border-top: 1px solid #ccc;
 }
 
 input,
-select
-{
+select {
     vertical-align: middle;
 }
 
-pre
-{
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word; /* IE */
+pre {
+    white-space: pre;
+    /* CSS2 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word;
+    /* IE */
 }
 
-input[type='radio']
-{
+input[type='radio'] {
     vertical-align: text-bottom;
 }
-input[type='checkbox']
-{
+
+input[type='checkbox'] {
     vertical-align: bottom;
 }
-.ie7 input[type='checkbox']
-{
+
+.ie7 input[type='checkbox'] {
     vertical-align: baseline;
 }
-.ie6 input
-{
+
+.ie6 input {
     vertical-align: text-bottom;
 }
 
 select,
 input,
-textarea
-{
+textarea {
     font: 99% sans-serif;
 }
 
-table
-{
+table {
     font: 100%;
     font-size: inherit;
 }
 
-small
-{
+small {
     font-size: 85%;
 }
 
-strong
-{
+strong {
     font-weight: bold;
 }
 
 td,
-td img
-{
+td img {
     vertical-align: top;
 }
 
+
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
 sub,
-sup
-{
+sup {
     font-size: 75%;
     line-height: 0;
-
     position: relative;
 }
-sup
-{
+
+sup {
     top: -.5em;
 }
-sub
-{
+
+sub {
     bottom: -.25em;
 }
 
+
 /* standardize any monospaced elements */
+
 pre,
 code,
 kbd,
-samp
-{
+samp {
     font-family: monospace, sans-serif;
 }
 
+
 /* hand cursor on clickable elements */
+
 .clickable,
 label,
 input[type=button],
 input[type=submit],
 input[type=file],
-button
-{
+button {
     cursor: pointer;
 }
 
+
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
+
 button,
 input,
 select,
-textarea
-{
+textarea {
     margin: 0;
 }
 
-/* make buttons play nice in IE */
-button,
-input[type=button]
-{
-    overflow: visible;
 
+/* make buttons play nice in IE */
+
+button,
+input[type=button] {
+    overflow: visible;
     width: auto;
 }
 
+
 /* scale images in IE7 more attractively */
-.ie7 img
-{
+
+.ie7 img {
     -ms-interpolation-mode: bicubic;
 }
+
 
 /* prevent BG image flicker upon hover
    (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
 
+
 /* let's clear some floats */
+
 .clearfix:before,
-.clearfix:after
-{
+.clearfix:after {
     display: block;
-    overflow: hidden; 
-
+    overflow: hidden;
     height: 0;
-
     content: '\0020';
 }
-.clearfix:after
-{
+
+.clearfix:after {
     clear: both;
 }
-.clearfix
-{
+
+.clearfix {
     zoom: 1;
 }
-.chromeframe
-{
+
+.chromeframe {
     position: absolute;
     top: 0;
 }
+
+
 /*! yaml-css v4.1.0 (2013-06-11) */
 
-@media all
-{
-    *
-    {
+@media all {
+    * {
         margin: 0;
         padding: 0;
-    }option
-    {
+    }
+    option {
         padding-left: .4em;
-    }select
-    {
+    }
+    select {
         padding: 1px;
-    }* html body *
-    {
+    }
+    * html body * {
         overflow: visible;
-    }body
-    {
+    }
+    body {
         font-size: 100%;
-
         text-align: left;
-
         color: #000;
         background: #fff;
-    }div:target,
+    }
+    div:target,
     h1:target,
     h2:target,
     h3:target,
     h4:target,
     h5:target,
-    h6:target
-    {
+    h6:target {
         outline: 0 none;
-    }article,
+    }
+    article,
     aside,
     details,
     figcaption,
@@ -404,291 +390,265 @@ input[type=button]
     main,
     nav,
     section,
-    summary
-    {
+    summary {
         display: block;
-    }audio,
+    }
+    audio,
     canvas,
-    video
-    {
+    video {
         display: inline-block;
-    }audio:not([controls])
-    {
+    }
+    audio:not([controls]) {
         display: none;
-    }[hidden]
-    {
+    }
+    [hidden] {
         display: none;
-    }html
-    {
-            -ms-text-size-adjust: 100%;
+    }
+    html {
+        -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
-    }input[type=checkbox],
-    input[type=radio]
-    {
+    }
+    input[type=checkbox],
+    input[type=radio] {
         box-sizing: border-box;
         padding: 0;
-    }input[type=search]
-    {
+    }
+    input[type=search] {
         -webkit-box-sizing: content-box;
-           -moz-box-sizing: content-box;
-                box-sizing: content-box;
-
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
         -webkit-appearance: textfield;
-    }input[type=search]::-webkit-search-cancel-button,
-    input[type=search]::-webkit-search-decoration
-    {
+    }
+    input[type=search]::-webkit-search-cancel-button,
+    input[type=search]::-webkit-search-decoration {
         -webkit-appearance: none;
-    }svg:not(:root)
-    {
+    }
+    svg:not(:root) {
         overflow: hidden;
-    }figure
-    {
+    }
+    figure {
         margin: 0;
-    }fieldset,
-    img
-    {
+    }
+    fieldset,
+    img {
         border: 0 solid;
-    }ul,
+    }
+    ul,
     ol,
-    dl
-    {
+    dl {
         margin: 0 0 1em 1em;
-    }li
-    {
+    }
+    li {
         line-height: 1.5em;
-
         margin-left: .8em;
-    }dt
-    {
+    }
+    dt {
         font-weight: 700;
-    }dd
-    {
+    }
+    dd {
         margin: 0 0 1em .8em;
-    }blockquote
-    {
+    }
+    blockquote {
         margin: 0 0 1em .8em;
-    }q
-    {
+    }
+    q {
         quotes: none;
-    }blockquote:before,
+    }
+    blockquote:before,
     blockquote:after,
     q:before,
-    q:after
-    {
+    q:after {
         content: '';
         content: none;
-    }table
-    {
+    }
+    table {
         border-spacing: 0;
         border-collapse: collapse;
-    }.ym-clearfix:before
-    {
+    }
+    .ym-clearfix:before {
         display: table;
-
         content: '';
-    }.ym-clearfix:after
-    {
+    }
+    .ym-clearfix:after {
         font-size: 0;
-
         display: block;
         visibility: hidden;
         clear: both;
-
         height: 0;
-
         content: '.';
-    }.ym-contain-dt
-    {
+    }
+    .ym-contain-dt {
         display: table;
-
         width: 100%;
-
         table-layout: fixed;
-    }.ym-contain-oh
-    {
+    }
+    .ym-contain-oh {
         display: block;
         overflow: hidden;
-
         width: 100%;
-    }.ym-contain-fl
-    {
+    }
+    .ym-contain-fl {
         float: left;
-
         width: 100%;
-    }.ym-column
-    {
+    }
+    .ym-column {
         display: table;
-
         width: 100%;
-
         table-layout: fixed;
-    }.ym-col1
-    {
+    }
+    .ym-col1 {
         float: left;
-
         width: 20%;
-    }.ym-col2
-    {
+    }
+    .ym-col2 {
         float: right;
-
         width: 20%;
-    }.ym-col3
-    {
+    }
+    .ym-col3 {
         width: auto;
         margin: 0 20%;
-    }.ym-cbox
-    {
+    }
+    .ym-cbox {
         padding: 0 10px;
-    }.ym-cbox-left
-    {
+    }
+    .ym-cbox-left {
         padding: 0 10px 0 0;
-    }.ym-cbox-right
-    {
+    }
+    .ym-cbox-right {
         padding: 0 0 0 10px;
-    }.ym-ie-clearing
-    {
+    }
+    .ym-ie-clearing {
         display: none;
-    }.ym-grid
-    {
+    }
+    .ym-grid {
         display: table;
-
         width: 100%;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0;
-
         table-layout: fixed;
         list-style-type: none;
-    }.ym-gl
-    {
+    }
+    .ym-gl {
         float: left;
-
         margin: 0;
-    }.ym-gr
-    {
+    }
+    .ym-gr {
         float: right;
-
         margin: 0 0 0 -5px;
-    }.ym-g20
-    {
+    }
+    .ym-g20 {
         width: 20%;
-    }.ym-g40
-    {
+    }
+    .ym-g40 {
         width: 40%;
-    }.ym-g60
-    {
+    }
+    .ym-g60 {
         width: 60%;
-    }.ym-g80
-    {
+    }
+    .ym-g80 {
         width: 80%;
-    }.ym-g25
-    {
+    }
+    .ym-g25 {
         width: 25%;
-    }.ym-g33
-    {
+    }
+    .ym-g33 {
         width: 33.333%;
-    }.ym-g50
-    {
+    }
+    .ym-g50 {
         width: 50%;
-    }.ym-g66
-    {
+    }
+    .ym-g66 {
         width: 66.666%;
-    }.ym-g75
-    {
+    }
+    .ym-g75 {
         width: 75%;
-    }.ym-g38
-    {
+    }
+    .ym-g38 {
         width: 38.2%;
-    }.ym-g62
-    {
+    }
+    .ym-g62 {
         width: 61.8%;
-    }.ym-gbox
-    {
+    }
+    .ym-gbox {
         padding: 0 10px;
-    }.ym-gbox-left
-    {
+    }
+    .ym-gbox-left {
         padding: 0 10px 0 0;
-    }.ym-gbox-right
-    {
+    }
+    .ym-gbox-right {
         padding: 0 0 0 10px;
-    }.ym-equalize
-    {
+    }
+    .ym-equalize {
         overflow: hidden;
-    }.ym-equalize > [class*=ym-g]
-    {
+    }
+    .ym-equalize > [class*=ym-g] {
         display: table-cell;
         float: none;
-
         margin: 0;
-
         vertical-align: top;
-    }.ym-equalize > [class*=ym-g] > [class*=ym-gbox]
-    {
+    }
+    .ym-equalize > [class*=ym-g] > [class*=ym-gbox] {
         margin-bottom: -10000px;
         padding-bottom: 10000px;
-    }.ym-form,
-    .ym-form fieldset
-    {
+    }
+    .ym-form,
+    .ym-form fieldset {
         overflow: hidden;
-    }.ym-form div
-    {
+    }
+    .ym-form div {
         position: relative;
-    }.ym-form label,
+    }
+    .ym-form label,
     .ym-form .ym-label,
-    .ym-form .ym-message
-    {
+    .ym-form .ym-message {
         line-height: 1.5;
-
         position: relative;
-
         display: block;
-    }.ym-form .ym-fbox-check label
-    {
+    }
+    .ym-form .ym-fbox-check label {
         display: inline;
-    }.ym-form input,
-    .ym-form textarea
-    {
+    }
+    .ym-form input,
+    .ym-form textarea {
         cursor: text;
-    }.ym-form .ym-fbox-check input,
+    }
+    .ym-form .ym-fbox-check input,
     .ym-form input[type=radio],
     .ym-form input[type=checkbox],
     .ym-form select,
-    .ym-form label
-    {
+    .ym-form label {
         cursor: pointer;
-    }.ym-form textarea
-    {
+    }
+    .ym-form textarea {
         overflow: auto;
-    }.ym-form input.hidden,
-    .ym-form input[type=hidden]
-    {
+    }
+    .ym-form input.hidden,
+    .ym-form input[type=hidden] {
         display: none!important;
-    }.ym-form .ym-fbox:before,
+    }
+    .ym-form .ym-fbox:before,
     .ym-form .ym-fbox-text:before,
     .ym-form .ym-fbox-select:before,
     .ym-form .ym-fbox-check:before,
-    .ym-form .ym-fbox-button:before
-    {
+    .ym-form .ym-fbox-button:before {
         display: table;
-
         content: '';
-    }.ym-form .ym-fbox:after,
+    }
+    .ym-form .ym-fbox:after,
     .ym-form .ym-fbox-text:after,
     .ym-form .ym-fbox-select:after,
     .ym-form .ym-fbox-check:after,
-    .ym-form .ym-fbox-button:after
-    {
+    .ym-form .ym-fbox-button:after {
         font-size: 0;
-
         display: block;
         visibility: hidden;
         clear: both;
-
         height: 0;
-
         content: '.';
-    }.ym-form .ym-fbox-check input:focus,
+    }
+    .ym-form .ym-fbox-check input:focus,
     .ym-form .ym-fbox-check input:hover,
     .ym-form .ym-fbox-check input:active,
     .ym-form input[type=radio]:focus,
@@ -696,266 +656,248 @@ input[type=button]
     .ym-form input[type=radio]:active,
     .ym-form input[type=checkbox]:focus,
     .ym-form input[type=checkbox]:hover,
-    .ym-form input[type=checkbox]:active
-    {
+    .ym-form input[type=checkbox]:active {
         border: 0 none;
-    }.ym-form input,
+    }
+    .ym-form input,
     .ym-form textarea,
-    .ym-form select
-    {
+    .ym-form select {
         position: relative;
-
         display: block;
-
         -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         width: 70%;
-    }.ym-form .ym-fbox-check input,
+    }
+    .ym-form .ym-fbox-check input,
     .ym-form input[type=radio],
-    .ym-form input[type=checkbox]
-    {
+    .ym-form input[type=checkbox] {
         display: inline;
-
         width: auto;
         width: auto;
         margin-right: .5ex;
         margin-left: 0;
-    }.ym-form label,
-    .ym-form .ym-label
-    {
+    }
+    .ym-form label,
+    .ym-form .ym-label {
         -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-    }.ym-form .ym-fbox-button input
-    {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .ym-form .ym-fbox-button input {
         display: inline;
         overflow: visible;
-
         width: auto;
-    }.ym-form .ym-inline
-    {
+    }
+    .ym-form .ym-inline {
         display: inline-block;
-
         width: auto;
-
         vertical-align: baseline;
-    }.ym-fbox-wrap
-    {
+    }
+    .ym-fbox-wrap {
         display: table;
-
         width: 70%;
-
         table-layout: fixed;
-    }.ym-fbox-wrap input,
+    }
+    .ym-fbox-wrap input,
     .ym-fbox-wrap textarea,
-    .ym-fbox-wrap select
-    {
+    .ym-fbox-wrap select {
         width: 100%;
-    }.ym-fbox-wrap input[type=radio],
-    .ym-fbox-wrap input[type=checkbox]
-    {
+    }
+    .ym-fbox-wrap input[type=radio],
+    .ym-fbox-wrap input[type=checkbox] {
         display: inline;
-
         width: auto;
         margin-right: .5ex;
         margin-left: 0;
-    }.ym-fbox-wrap label,
-    .ym-fbox-wrap .ym-label
-    {
+    }
+    .ym-fbox-wrap label,
+    .ym-fbox-wrap .ym-label {
         display: inline;
-    }.ym-full input,
+    }
+    .ym-full input,
     .ym-full textarea,
-    .ym-full select
-    {
+    .ym-full select {
         width: 100%;
-    }.ym-full .ym-fbox-wrap
-    {
+    }
+    .ym-full .ym-fbox-wrap {
         width: 100%;
-    }.ym-columnar input,
+    }
+    .ym-columnar input,
     .ym-columnar textarea,
-    .ym-columnar select
-    {
+    .ym-columnar select {
         float: left;
-
         margin-right: -3px;
-    }.ym-columnar label,
-    .ym-columnar .ym-label
-    {
+    }
+    .ym-columnar label,
+    .ym-columnar .ym-label {
         z-index: 1;
-
         display: inline;
         float: left;
-
         width: 30%;
-    }.ym-columnar .ym-fbox-check input,
-    .ym-columnar .ym-message
-    {
+    }
+    .ym-columnar .ym-fbox-check input,
+    .ym-columnar .ym-message {
         margin-left: 30%;
-    }.ym-columnar .ym-fbox-wrap
-    {
+    }
+    .ym-columnar .ym-fbox-wrap {
         margin-right: -3px;
         margin-left: 30%;
-    }.ym-columnar .ym-fbox-wrap label
-    {
+    }
+    .ym-columnar .ym-fbox-wrap label {
         z-index: 1;
-
         float: none;
-
         width: auto;
         margin-left: 0;
-    }.ym-columnar .ym-fbox-wrap input
-    {
+    }
+    .ym-columnar .ym-fbox-wrap input {
         position: relative;
-
         margin-left: 0;
-    }.ym-columnar .ym-fbox-check
-    {
+    }
+    .ym-columnar .ym-fbox-check {
         position: relative;
-    }.ym-columnar .ym-fbox-check label,
-    .ym-columnar .ym-fbox-check .ym-label
-    {
+    }
+    .ym-columnar .ym-fbox-check label,
+    .ym-columnar .ym-fbox-check .ym-label {
         padding-top: 0;
-    }.ym-columnar .ym-fbox-check input
-    {
+    }
+    .ym-columnar .ym-fbox-check input {
         top: 3px;
-    }.ym-columnar .ym-fbox-button input
-    {
+    }
+    .ym-columnar .ym-fbox-button input {
         float: none;
-
         margin-right: 1em;
-    }.ym-fbox-wrap + .ym-fbox-wrap
-    {
+    }
+    .ym-fbox-wrap + .ym-fbox-wrap {
         margin-top: .5em;
-    }.ym-columnar fieldset .ym-fbox-button,
-    fieldset.ym-columnar .ym-fbox-button
-    {
+    }
+    .ym-columnar fieldset .ym-fbox-button,
+    fieldset.ym-columnar .ym-fbox-button {
         padding-left: 30%;
-    }.ym-skip,
+    }
+    .ym-skip,
     .ym-hideme,
-    .ym-print
-    {
+    .ym-print {
         position: absolute;
         top: -32768px;
         left: -32768px;
-    }.ym-skip:focus,
-    .ym-skip:active
-    {
+    }
+    .ym-skip:focus,
+    .ym-skip:active {
         position: static;
         top: 0;
         left: 0;
-    }.ym-skiplinks
-    {
+    }
+    .ym-skiplinks {
         position: absolute;
         z-index: 1000;
         top: 0;
         left: -32768px;
-
         width: 100%;
         margin: 0;
         padding: 0;
-
         list-style-type: none;
-    }.ym-skiplinks .ym-skip:focus,
-    .ym-skiplinks .ym-skip:active
-    {
+    }
+    .ym-skiplinks .ym-skip:focus,
+    .ym-skiplinks .ym-skip:active {
         position: absolute;
         left: 32768px;
-
         width: 100%;
-
         outline: 0 none;
     }
-}@media print
-{
+}
+
+@media print {
     .ym-grid > .ym-gl,
-    .ym-grid > .ym-gr
-    {
+    .ym-grid > .ym-gr {
         display: table;
         overflow: visible;
-
         table-layout: fixed;
-    }.ym-print
-    {
+    }
+    .ym-print {
         position: static;
         left: 0;
-    }.ym-noprint
-    {
+    }
+    .ym-noprint {
         display: none!important;
     }
 }
+
+
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/
 
+
 /* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
-body
-{
+
+body {
     font: 13px Helmet, Freesans, sans-serif;
 }
 
+
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
 
+
 /* We like off-black for text. */
+
 body,
 select,
 input,
-textarea
-{
+textarea {
     color: #333;
 }
 
-a
-{
+a {
     color: #03f;
 }
-a:hover
-{
+
+a:hover {
     color: #69f;
 }
 
+
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection
-{
-    color: #fff;
-    background: #fcd700;
-    text-shadow: none;
-}
-::selection
-{
+
+::-moz-selection {
     color: #fff;
     background: #fcd700;
     text-shadow: none;
 }
 
+::selection {
+    color: #fff;
+    background: #fcd700;
+    text-shadow: none;
+}
+
+
 /*  j.mp/webkit-tap-highlight-color */
-a:link
-{
+
+a:link {
     -webkit-tap-highlight-color: #fcd700;
 }
 
-ins
-{
+ins {
     text-decoration: none;
-
     color: #000;
     background-color: #fcd700;
 }
-mark
-{
+
+mark {
     font-weight: bold;
     font-style: italic;
-
     color: #000;
     background-color: #fcd700;
 }
 
+
 /* Mozilla dosen't style place holders by default */
-input:-moz-placeholder
-{
+
+input:-moz-placeholder {
     color: #a9a9a9;
 }
-textarea:-moz-placeholder
-{
+
+textarea:-moz-placeholder {
     color: #a9a9a9;
 }
 
@@ -963,8 +905,7 @@ textarea:-moz-placeholder
 /* And here begins the WordPress fun.
 -------------------------------------------------------------------------------*/
 
-#wrapper
-{
+#wrapper {
     width: 960px;
     margin: 20px auto;
 }
@@ -972,199 +913,180 @@ textarea:-moz-placeholder
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
-@media print
-{
-}
+
+@media print {}
 
 
 /* Media queries!
 -------------------------------------------------------------------------------*/
+
 
 /* Always do mobile-first, and consider using em units: http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw
 
 @media screen and (min-width: 480px) {
 
 } */
-.flexible
-{
+
+.flexible {
     max-width: 100%;
 }
+
+
 /* IE6 support - 2% space for borders */
-* html .flexible
-{
+
+* html .flexible {
     width: 88%;
 }
 
-@media screen and ( max-width: 532px )
-{
-}
-@media screen and ( max-width: 1024px )
-{
+@media screen and ( max-width: 532px) {}
+
+@media screen and ( max-width: 1024px) {
     /* linearization for grid module */
     .linearize-level-1,
     .linearize-level-1 > [class*='ym-g'],
     .linearize-level-1 > *,
-    .linearize-level-1 > li > *
-    {
+    .linearize-level-1 > li > * {
         display: block;
         float: none;
-
         width: 100% !important;
         margin: 0;
         padding: 0;
-
         text-align: center;
     }
     /* reset defined gutter values */
-    .linearize-level-1 > [class*='ym-g'] > [class*='ym-gbox']
-    {
-        overflow: hidden; /* optional for containing floats */
-
+    .linearize-level-1 > [class*='ym-g'] > [class*='ym-gbox'] {
+        overflow: hidden;
+        /* optional for containing floats */
         margin: 0;
         padding: 0;
     }
 }
-.ym-wrapper
-{
-    position: relative;
 
+.ym-wrapper {
+    position: relative;
     width: 100%;
     height: auto;
-
     text-align: center;
 }
-.ym-wbox
-{
-    position: relative;
 
+.ym-wbox {
+    position: relative;
     max-width: 1016px;
     height: auto;
     margin: 0 auto;
     padding: 10px 0 !important;
 }
-.fixed
-{
+
+.fixed {
     position: fixed !important;
 }
-.absolute
-{
+
+.absolute {
     position: absolute !important;
 }
-.justify
-{
+
+.justify {
     text-align: justify;
 }
-.bold
-{
+
+.bold {
     font-weight: bold;
 }
-.center
-{
+
+.center {
     text-align: center;
 }
-.right
-{
+
+.right {
     text-align: right;
 }
-img.alignright
-{
-    float: right;
 
+img.alignright {
+    float: right;
     margin: 0 0 1em 1em;
 }
-img.alignleft
-{
-    float: left;
 
+img.alignleft {
+    float: left;
     margin: 0 1em 1em 0;
 }
-img.aligncenter
-{
-    display: block;
 
+img.aligncenter {
+    display: block;
     margin-right: auto;
     margin-left: auto;
 }
-a img.alignright
-{
-    float: right;
 
+a img.alignright {
+    float: right;
     margin: 0 0 1em 1em;
 }
-a img.alignleft
-{
-    float: left;
 
+a img.alignleft {
+    float: left;
     margin: 0 1em 1em 0;
 }
-a img.aligncenter
-{
-    display: block;
 
+a img.aligncenter {
+    display: block;
     margin-right: auto;
     margin-left: auto;
 }
+
+
 /* calendar widget */
-.widget_calendar
-{
+
+.widget_calendar {
     float: left;
 }
-#wp-calendar
-{
+
+#wp-calendar {
     width: 100%;
 }
-#wp-calendar caption
-{
+
+#wp-calendar caption {
     font-size: 12px;
-
     margin-top: 10px;
-    margin-bottom: 15px; 
-
+    margin-bottom: 15px;
     text-align: right;
-
     color: #333;
 }
-#wp-calendar thead
-{
+
+#wp-calendar thead {
     font-size: 10px;
 }
-#wp-calendar thead th
-{
+
+#wp-calendar thead th {
     padding-bottom: 10px;
 }
-#wp-calendar tbody
-{
+
+#wp-calendar tbody {
     color: #aaa;
 }
-#wp-calendar tbody td
-{
+
+#wp-calendar tbody td {
     padding: 8px;
-
     text-align: center;
-
     border: 1px solid #fff;
     background: #f5f5f5;
 }
-#wp-calendar tbody td:hover
-{
+
+#wp-calendar tbody td:hover {
     background: #fff;
 }
-#wp-calendar tbody .pad
-{
+
+#wp-calendar tbody .pad {
     background: none;
 }
-#wp-calendar tfoot #next
-{
-    font-size: 10px;
 
-    text-align: right; 
+#wp-calendar tfoot #next {
+    font-size: 10px;
+    text-align: right;
     text-transform: uppercase;
 }
-#wp-calendar tfoot #prev
-{
+
+#wp-calendar tfoot #prev {
     font-size: 10px;
-
-    padding-top: 10px; 
-
+    padding-top: 10px;
     text-transform: uppercase;
 }
